@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+void Cari(int x,int n){
+  static int i;
+  if(n == 0) cout << "Bilangan tidak ditemukan \n";
+  else if(x == n) cout << "Bilangan ditemukan setelah perulangan ke \n" << i;
+  else{
+    i++;
+    Cari(x, n-1);
+  }
+}
+
+int main(){
+  Cari(4,10);
+    return 0;
+}
